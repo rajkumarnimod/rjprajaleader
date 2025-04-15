@@ -1,0 +1,129 @@
+/*============================ crud =================== */
+::placeholder{
+	font-family: "Poppins", sans-serif;
+	color: #141415;
+}
+
+.login_sec{
+	display: flex;
+	justify-content: center;
+	padding: 7rem 0 2rem 0;
+}
+
+.login-container {
+	background: white;
+	padding: 1.2rem;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(18, 18, 18, 0.09);
+	width: 100%;
+	max-width: 600px;
+}
+
+.login-header {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.login-header h1 {
+	color: #2c3e50;
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+.login-header h1 i{
+	font-size: 1.5rem;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.form-group label {
+	color: #2c3e50;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.form-group input, select, textarea {
+	padding: 0.5rem 0.7rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 0.9rem;
+	transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+	outline: none;
+	border-color: #3498db;
+}
+
+.error-message {
+	color: #e74c3c;
+	font-size: 0.8rem;
+	display: none;
+}
+
+.login-button {
+	background: #3498db;
+	color: white;
+	padding: 0.8rem;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	font-weight: 500;
+	cursor: pointer;
+	letter-spacing: 2px;
+	margin-top: 1.5rem;
+	transition: background 0.3s ease;
+}
+
+.login-button:hover {
+	background: #2980b9;
+}
+
+.additional-options {
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+.additional-options a {
+	color: #3498db;
+	text-decoration: none;
+	font-size: 0.9rem;
+}
+
+.additional-options a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+	.login-container {
+		margin: 0.5rem;
+		padding: 0.8rem;
+	}
+	.login-header h1 {
+		font-size: 1.3rem;
+	}
+}
+
+#agreeterm {
+    width: 100%;
+}
+
+#agreeterm label {
+    display: flex;
+    align-items: center; 
+	justify-content: flex-start;
+}
+
+#agreeterm input {
+	width: 20px;
+    margin-right: 10px;
+}
