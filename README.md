@@ -1,108 +1,79 @@
+# ChangeAlert
 
-# 🔔 ChangeAlert
-
-
-> A lightweight, zero‑dependency JavaScript library for beautiful, fully‑customisable alert & toast notifications.
-
-ChangeAlert lets you drop‑in **success, error, warning, and info** alerts with just one line of code. Extend it with custom icons, sounds, themes, callbacks, and more – all in **3&nbsp;KB gzipped**.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 📸 Live Demo
+## Overview
 
-![ChangeAlert demo](https://raw.githubusercontent.com/your‑repo/changealert/main/assets/demo.gif)
-
-Or spin it up locally:
-
-```bash
-git clone https://github.com/your‑repo/changealert.git
-cd changealert/demo
-open index.html   # or just double‑click
-```
+**ChangeAlert** is a lightweight, customizable JavaScript alert notification library designed to enhance your web applications by providing visually appealing, interactive, and easy-to-use alert messages. It supports multiple alert types, sound notifications, custom icons, themes, and callback functions to create a dynamic user experience.
 
 ---
 
-## 📑 Table of Contents
+## Features
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [API](#api)
-- [Advanced Topics](#advanced-topics)
-- [Browser Support](#browser-support)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## ✨ Features
-
-| Feature | Description |
-|---------|-------------|
-| **4 alert types** | Success / Error / Warning / Info |
-| **Themes** | Light & Dark – switch per call |
-| **Sounds** | Default, custom, or muted |
-| **Timeout & Hover Pause** | Auto‑dismiss with optional pause on hover |
-| **Custom Icons** | Emoji or SVG |
-| **Callbacks** | `onClick`, `onClose` |
-| **No Dependencies** | Pure vanilla JS & CSS |
-| **Tiny footprint** | ~3 KB min+gzip |
+- Multiple alert types: success, error, warning, info
+- Customizable alert position on screen
+- Configurable timeout durations with pause on hover
+- Sound support with default and custom sounds
+- Dark and light themes
+- Custom icons (including emojis)
+- Close button with callbacks for clicks and closing events
+- Responsive and mobile-friendly
+- Easy integration with just CSS and JS files
 
 ---
 
-## 🚀 Getting Started
 
-### 1. Download
+## 🚀 Getting Started (Installation)
 
-Clone or grab the files:
-
-```
-/css/changealert.css
-/js/changealert.js
-```
-
-### 2. Include
-
-```html
-<link rel="stylesheet" href="css/changealert.css">
-<script src="js/changealert.js"></script>
-```
+Simply include the CSS and JS files in your HTML:
 
 > Place the script **before** `</body>` or use `defer`.
 
-### 3. Fire an Alert
-
 ```html
-<script>
-  ChangeAlert.success("Hello World!");
-</script>
+<link rel="stylesheet" href="ChangeAlert.css">
+<script src="ChangeAlert.js"></script>
 ```
 
-That’s it! 🎉
+### Download
+
+Clone or grab the files:
+
+``` html
+/dist/style.css
+/dist/script.js
+```
 
 ---
 
 ## 🔧 Usage
 
-### Basic
+### Basic Alerts
 
 ```js
-ChangeAlert.error("Something went wrong!");
+ChangeAlert.success("Operation completed successfully!");
+ChangeAlert.error("An error occurred!");
+ChangeAlert.warning("This is a warning!");
+ChangeAlert.info("Just an informational message!");
 ```
 
-### Combining Options
+### Customized Alerts
+>Pass optional settings as the second argument:
 
 ```js
 ChangeAlert.success("File uploaded!", {
-  position: "bottom-left",
+  position: "top-left",
   timeout: 5000,
-  theme: "dark",
   sound: true,
+  theme: "dark",
   icon: "🎉",
-  onClick: () => console.log("User clicked the toast"),
-  onClose: () => console.log("Toast dismissed")
+  closeButton: true,
+  pauseOnHover: true,
+  onClick: () => alert("You clicked the alert!"),
+  onClose: () => console.log("Alert closed!")
 });
+
 ```
 
 ---
@@ -169,23 +140,30 @@ setTimeout(() => toast.close(), 10000);
 
 ---
 
-## 🗺 Roadmap
-
-- [ ] Keyboard accessibility (focus management)  
-- [ ] TypeScript definitions  
-- [ ] Queue system / max toast count  
-- [ ] CDN bundle via jsDelivr  
-
 ---
 
-## 🤝 Contributing
+## Demo 
+>Use the following buttons to test alerts in your app:
 
-1. Fork the repo
-2. Create a branch: `git checkout -b feat/amazing-feature`
-3. Commit & push: `git commit -m "Add amazing feature"`  
-4. Open a Pull Request
+```html
+<button onclick="ChangeAlert.success('Success message!', { position: 'top-right', sound: true })">Success</button>
+<button onclick="ChangeAlert.error('Error occurred!', { position: 'bottom-left', timeout: 5000 })">Error</button>
+<button onclick="ChangeAlert.warning('Warning message!', { pauseOnHover: false, icon: '⚠️' })">Warning</button>
+<button onclick="ChangeAlert.info('Info message!', { theme: 'dark', closeButton: false })">Info</button>
+```
 
-Please run `npm run lint` and include tests.
+---
+## Contributing
+
+Thank you for your interest in contributing to ChangeAlert!
+
+Currently, we do not have a public roadmap or an npm package. However, you can help by:
+
+- Reporting bugs or issues via GitHub issues
+- Suggesting new features
+- Improving documentation or examples
+
+Please keep contributions aligned with the library’s simplicity and usability goals.
 
 ---
 
@@ -195,9 +173,13 @@ ChangeAlert is released under the [MIT license](LICENSE).
 
 ---
 
-## 👤 Author
+## License & Author
 
-**Rajkumar** – [masterinwebdesign.com](https://masterinwebdesign.com)  
-Connect: [Twitter](https://twitter.com/rajkumardev) • [LinkedIn](https://linkedin.com/in/rajkumardev)
+© 2025 Rajkumar Nimod. All rights reserved.
+
+Created with ❤️ by Rajkumar Nimod.
+
+Connect with me on [LinkedIn](https://www.linkedin.com/in/rajkumarnimod)
+
 
 > _Cool alerts for cool websites!_
